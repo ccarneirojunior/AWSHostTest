@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html >
+    
+    <head >
+        <style>
+           .header {
+            position: relative;
+            background-color:white;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            margin-left: 15%;
+            margin-right: 15%;
+            padding-bottom: 1px;
+            box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ;
+        }
+        .logo{
+            width: 50px;
+            height: 50px;
+        }
+        .title{
+            position: relative;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        button {
+            position: relative;
+            background-color: rgb(233, 233, 233);
+            border: 2px solid rgb(197, 197, 197);
+            border-radius: 15px;
+            color: rgb(163, 163, 163);
+            padding: 5px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        button:hover{
+            background-color: white;
+            color: rgb(255, 188, 43);
+            border-color: rgb(255, 188, 43);
+        }
+
+        .search{
+            position: relative;
+            background-color: white;
+            border: 2px solid rgb(197, 197, 197);
+            padding: 5px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+         
+        }
+
+        .account{
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            margin-top: 10px;
+
+        }
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+        .menu{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu button{
+            position: relative;
+            background-color: rgb(233, 233, 233);
+            border: 2px solid rgb(197, 197, 197);
+            border-radius: 15px;
+            color: rgb(163, 163, 163);
+            padding: 5px 55px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .menu button:hover{
+            background-color: white;
+            color: rgb(255, 188, 43);
+            border-color: rgb(255, 188, 43);
+        }
+
+            
+            
+            .container{
+                padding: 80px;               
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .prod_box {  
+                height: 600px;
+                width: 250px;
+                border: 1px solid black;
+                font: outline;
+                font-size: 25px;
+                background-color: rgb(226, 223, 223) ; 
+                border-radius: 20px;
+                box-shadow: 5px 10px rgb(194, 194, 194);
+                }
+
+            .prod_title{
+                padding: 10px;
+                padding-left: 25px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: inherit;
+            }
+
+            .shopping_cart {
+            height: 1000px;
+            width: 800px;
+            border: 1px solid black;
+            font: outline;
+            font-size: 25px;
+            background-color: (226, 223, 223) ; 
+            border-radius: 20px;
+            box-shadow: 5px 10px rgb(194, 194, 194);
+            }   
+
+            .price_box {  
+            justify-content: flex-start;
+            height: 800px;
+            width: 300px;
+            border: 1px solid black;
+            font: outline;
+            font-size: 25px;
+            background-color: rgb(226, 223, 223) ; 
+            border-radius: 20px;
+            box-shadow: 5px 10px rgb(194, 194, 194);
+             }   
+
+            .shopping_title{
+                padding: 10px;
+                padding-left: 25px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: inherit;
+                border-bottom: solid black;
+            }
+
+            .price_title{
+                padding: 10px;
+                padding-left: 25px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: inherit;
+            }
+
+            .prod_container{
+                border-top: solid black;
+                display: flex;
+                flex-direction: column;
+             }
+            
+            
+            .products{
+                padding-top: 40px;
+                padding-left: 25px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: inherit;
+                text-decoration: underline;
+            }
+            .products :hover{
+                color: rgb(231, 73, 73);
+            }
+
+            .price_container{
+            display: flex;
+            border-top: solid black;
+            }
+
+            .total_price{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: inherit;
+                }
+            
+                .total_text{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: inherit;
+                }
+        
+            .total_container{
+            display: flex;
+            border-top: solid black;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            }
+            
+            .total_price{
+                padding-left: 100px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .total_text{
+                padding-left: 10px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .final_price{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                text-decoration: underline;
+                padding-top: 20px;
+                
+            }
+
+            .final_total{
+                padding-left: 110px;
+                padding-top: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+            .margin{
+                background-color: #18515E;
+                height: 50px;
+                margin:unset 100%;
+            }
+
+            .Accept_text{
+                padding-left: 10px;
+                padding-top: 40px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: inherit;
+            }
+            #Image_accept{
+                padding-left: 13px;
+                width: 90%;
+                padding-top: 40px;
+            }
+            .shopping_cart_container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .item_container{
+                width: 600px;
+                padding-left: 40px;
+                padding-top: 40px;
+                padding-bottom: 20px;
+            }
+            #item_image{
+                width: 200px;
+                height: 309px;
+               
+            }
+            .button_container{
+                border-top: solid black;
+            }
+            .image_box{
+                background-color: rgb(153, 151, 151); 
+                display: flex;
+                border-radius: 20px;
+                width: 650px;
+
+            }
+            .prod_text{
+                padding-top: 20px;
+                padding-left: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 25px;
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+            .price_row{
+                padding-top: 20px;
+                padding-left: 40px;
+                display: flex;
+                font-size: 28px;
+            }
+            .discount{
+                padding-left: 30px;
+                text-decoration: line-through;
+                text-decoration-color: rgb(161, 5, 5);
+                color: rgb(161, 5, 5);
+            }
+            .dropbtn{
+                color: black;
+                padding: 20px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+            .dropdown{
+                padding-left: 80px;
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown_content{
+                display: none;
+                position: absolute;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                background-color: white;
+            }
+            .dropdown_content a{
+                color: black;
+                display: block;
+                padding: 12px 16px;
+            }
+            .dropdown_content a :hover {background-color: rgb(138, 138, 138);}
+            
+            .dropdown:hover .dropdown_content{      
+                display: block;
+            }
+            .dropdown:hover .dropbtn {
+              background-color: #949494;
+            }
+            .icon_row{
+                display: flex;
+            }
+            #trash_can{
+                height: 30px;
+                padding-top: 75px;
+                padding-left: 25px;
+            }
+            .icon_txt{
+                padding-left: 10px;
+                padding-top: 75px;
+                font-size: 22px;
+            }
+            .trash_can{
+                display: flex;
+            }
+            #heart{
+                height: 30px;
+                padding-top: 75px;
+                padding-left: 40px;
+            }
+            .heart{
+                display: flex;
+            }
+            .button_container{
+                display: flex;
+                padding: 40px;
+                justify-content: space-between;
+            }
+            .Remove{
+                font-size: 30px;
+            }
+
+            .Shopping_button {
+                display: inline-block;
+                padding: 15px 25px;
+                font-size: 24px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color:black;
+                background-color: #18515E;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+                }
+                
+            .Shopping_button:hover {background-color: #21d3f7}
+
+            .Shopping_button:active {
+                background-color: #3e8e41;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+                }
+
+            .icon_txt :hover{
+                color: rgb(231, 73, 73);
+            }
+        </style>
+    </head>
+        <body >           
+            <div class="header">
+                <div class="flex">
+                        <div class="item"><img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixFQB4WSgKYreYMSJyHuRxSBa1JrYeG-9gg&usqp=CAU"></div>
+                        <div class="item"><h1 class="title">Lazando</h1></div>
+                </div>            
+                <div class="account">
+                    <button>Account</button>
+                    <button>Shopping cart</button>
+                </div>
+                <div class="menu">
+                    <button><a href="Products.html">Products</a></button>
+                    <button>Sales</button>
+                    <button>Contact us</button>
+                    <button>Terms of Service</button>
+                    <input class="search" type="text" name="Search" placeholder="Search">
+            </div>
+        </div>
+           <div class="container">
+            <div class="prod_box">                
+                <div class="prod_title">Products</div>
+                <div class="prod_container">
+                <div class="products"> <a>Sci-Fi</a></div>
+                <div class="products"> <a>Poetry</a></div>
+                <div class="products"> <a>Fiction</a></div>
+                <div class="products"> <a>Novels</a></div>
+                <div class="products"> <a>Sciance</a></div>
+                <div class="products"> <a>For Kids</a></div></div>
+            </div>
+            <div class="shopping_cart">
+                <div class="shopping_title">Shopping Cart</div>
+                <div class="shopping_cart_container" >
+                    <div class="item_container">
+                    <div class="image_box"><img id="item_image"src="https://images-na.ssl-images-amazon.com/images/I/41ACWHUdp3L._SX320_BO1,204,203,200_.jpg">
+                        <div class="prod_text"> Lord Byron - Selected Poems
+                            <div class="price_row">
+                            <div>90€</div>
+                            <div class="discount">100€</div>
+                            <div class="dropdown">
+                                <button class="dropbtn">1</button>
+                                <div class="dropdown_content">
+                                    <a>1</a>
+                                    <a>2</a>
+                                    <a>3</a>
+                                    <a>4</a>
+                                    <a>5</a>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="icon_row">
+                            <div class="trash_can"><img id="trash_can"src="https://cdn.onlinewebfonts.com/svg/img_210997.png"><div class="icon_txt">
+                            <a>Remove</a>
+                            </div>
+                            </div>
+                            <div class="heart"><img id="heart" src="https://freeiconshop.com/wp-content/uploads/edd/heart-outline.png">
+                                <div class="icon_txt"><a>Add to Favourites</a></div>
+                        </div>
+                        </div>
+                    </div>  
+                    </div>      
+                </div>
+                    <div class="item_container">
+                        <div class="image_box"><img id="item_image"src="https://m.media-amazon.com/images/I/41dcD3TQHqL.jpg">
+                        <div class="prod_text"> Modern classics, Väinö Linna - Unknown Soldier
+                            <div class="price_row">
+                                <div>11,31€</div>
+                            <div class="discount">15€</div>
+                           <div class="dropdown">
+                               <button class="dropbtn">1</button>
+                               <div class="dropdown_content">
+                                   <a>1</a>
+                                   <a>2</a>
+                                   <a>3</a>
+                                   <a>4</a>
+                                   <a>5</a>
+                               </div>
+                           </div> 
+                        </div>
+                    <div class="icon_row">
+                        <div class="trash_can"><img id="trash_can"src="https://cdn.onlinewebfonts.com/svg/img_210997.png"><div class="icon_txt">
+                        <a>Remove</a>
+                        </div>
+                        </div>
+                        <div class="heart"><img id="heart" src="https://freeiconshop.com/wp-content/uploads/edd/heart-outline.png">
+                            <div class="icon_txt"><a>Add to Favourites</a></div>
+                    </div>
+                    </div>
+                        </div>
+                    </div>   
+                    </div>   
+                        <div class="button_container">
+                            <button class="Shopping_button">Clear Shopping Cart</button>                           
+                            <button class="Shopping_button">Confirm Order</button>                          
+                        </div>
+                </div>            
+            </div>
+            <div class="price_box">
+                <div class="price_title">Total:</div>
+                <div class="price_container">
+                    <div class="text_container">
+                    <div class="total_text">Net price:</div>
+                    <div class="total_text">Tax:</div>
+                    <div class="total_text">Shipping:</div>
+                    </div>
+                    
+                <div class="value_container">  
+                    <div class="total_price">€77,00</div>
+                    <div class="total_price">€24,31</div>
+                    <div class="total_price">€5,00</div></div>
+                </div>
+                <div class="total_container">
+                    <div class="final_price">Total:</div>
+                    <div class="final_total">€116,31</div>
+                </div>
+                <div class="margin"></div>
+                <div class="Accept_container">
+                    <div class=Accept_text>We Accept:</div>
+                    <img id="Image_accept"src="https://parisbloom.com/wp-content/themes/woodmart-child/images/payment-methods-secure.png">
+                
+                </div>
+             </div>
+      </div>
+        </body>
+</html>
